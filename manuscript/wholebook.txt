@@ -213,33 +213,50 @@ order to fulfill the use cases?
   **request data handling**
 * We not only want to handle requests for URLs, we also want to display
   content when these URLs are requested, which means we need some kind
-  of **view logic** the request handlers can use in order to send
+  of **view logic** that the request handlers can use in order to send
   content to the user\'s browser
 * Last but not least, the user will be able to upload images, so we are
   going to need some kind of **upload handling** which takes care of the
   details
 
-Let\'s think a moment about how we would build this stack with PHP.
+We are going to implement the described use cases and the outlined
+application stack in different flavours. We will start with a "bare metal"
+version, i.e., we will only use what Node.js provides directly, and with
+one exception, we will not make use of any frameworks or external libraries.
+For this first version, we will not use an HTTP middleware, but instead we
+will write a rudimentary one ourselves. We will not use a database for storing
+data, but instead we will utilize the local file system.
+
+Once we have this basic version up and running, we will step by step transform
+it into a more sophisticated version - we will add database support, once for
+MongoDB and once for MySQL, then we will refactor our homegrown HTTP-handling
+architecture to the Express.js framework, and last but not least, we will add
+realtime messaging using the Socket.IO library. By doing so, we will encounter
+all the aspects and techniques within Node.js that are worthwhile and important
+to know.
+
+But let's not get ahead of ourselves - we will just start at the beginning
+and implement the first basic version, beginning with the first part of our
+stack, the HTTP server.
+
+# Building a basic application stack
+
+## A simple HTTP server
+
+Let\'s think for a moment about how we would build this stack with PHP.
 It\'s not exactly a secret that the typical setup would be an Apache
 HTTP server with mod\_php5 installed.   
  Which in turn means that the whole \"we need to be able to serve web
 pages and receive HTTP requests\" stuff doesn\'t happen within PHP
 itself.
 
-Well, with node, things are a bit different. Because with Node.js, we
+Well, with Node.js, things are a bit different. Because with Node.js, we
 not only implement our application, we also implement the whole HTTP
 server. In fact, our web application and its web server are basically
 the same.
 
 This might sound like a lot of work, but we will see in a moment that
 with Node.js, it\'s not.
-
-Let\'s just start at the beginning and implement the first part of our
-stack, the HTTP server.
-
-# Building the application stack
-
-## A basic HTTP server
 
 When I arrived at the point where I wanted to start with my first
 \"real\" Node.js application, I wondered not only how to actually code
