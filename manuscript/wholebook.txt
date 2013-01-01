@@ -189,7 +189,7 @@ Let\'s keep it simple, but realistic:
   image should then be uploaded to http://*domain*/upload, where it is
   displayed once the upload is finished
 
-Fair enough. Now, you could achieve this goal by googling and hacking
+Fair enough. Now, we could achieve this goal by googling and hacking
 together *something*. But that\'s not what we want to do here.
 
 Furthermore, we don\'t want to write only the most basic code to achieve
@@ -2141,28 +2141,15 @@ And that\'s it. Restart the server, and the complete use case will be
 available. Select a local PNG image from your hardrive, upload it to the
 server, and have it displayed in the web page.
 
-# Conclusion and outlook
+# Adding unit tests using Jasmine
 
-Congratulations, our mission is accomplished! We wrote a simple yet
-full-fledged Node.js web application. We talked about server-side
-JavaScript, functional programming, blocking and non-blocking
-operations, callbacks, events, custom, internal and external modules,
-and a lot more.
+# Extending the basic version with MongoDB support
 
-Of course, there\'s a lot of stuff we did not talk about: how to talk to
-a database, how to write unit tests, how to create external modules that
-are installable via NPM, or even something simple like how to handle GET
-requests.
+# Extending the basic version with MySQL support
 
-But that\'s the fate of every book aimed at beginners - it can\'t talk
-about every single aspect in every single detail.
+# Refactoring the code into an Express.js application
 
-The good news is, the Node.js community is extremly vibrant (think of an
-ADHD kid on caffeine, but in a positive way), which means there are a
-lot of resources out there, and a lot of places to get your questions
-answered. The [Node.js community wiki][12] and [the NodeCloud
-directory][13] are probably the best starting points for more
-information.
+# Adding real time messaging using Socket.IO
 
 
 
@@ -2177,5 +2164,3 @@ information.
 [9]: http://localhost:8888/foo 
 [10]: http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/ 
 [11]: http://localhost:8888/show 
-[12]: https://github.com/joyent/node/wiki 
-[13]: http://www.nodecloud.org/ 
