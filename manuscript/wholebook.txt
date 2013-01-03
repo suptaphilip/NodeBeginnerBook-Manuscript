@@ -7,16 +7,26 @@ applications for Node.js, teaching you everything you need to know about
 
 ## Status
 
-You are reading the final version of this book, i.e., updates are only
-done to correct errors or to reflect changes in new versions of Node.js.
-It was last updated on February 12, 2012.
+The text you are currently reading was last updated on January 3, 2013.
 
-The code samples in this book are tested to work with Node.js version
-0.6.10.
+The introductionary part, where you learn about Node.js and how it works,
+plus the first hands-on part where you develop a simple, yet fully working
+web application, has been finished several month ago and is considered
+mature and stable. These two part are exactly what you need to get started if
+you have never written a single line of Node.js code before. However,
+advanced topics, which allow you to extend your Node.js know-how once you
+mastered the basics, are found in the second hands-on part.
+
+This third part - where you learn to develop a fully featured web chat
+application with websocket-based realtime messaging, drag-and-drop file
+sharing, a database backend (MongoDB as well as MySQL), including a suite
+of unit tests - is currently work in progress and about 0% done.
+
+All code in this book is tested to work with Node.js version 0.8.16.
 
 ## Intended audience
 
-This document will probably fit best for readers that have a background
+This book will probably fit best for readers that have a background
 similar to my own: experienced with at least one object-oriented
 language like Ruby, Python, PHP or Java, only little experience with
 JavaScript, and completely new to Node.js.
@@ -30,42 +40,41 @@ However, because functions and objects in JavaScript are different from
 their counterparts in most other languages, these will be explained in
 more detail.
 
-## Structure of this document
+## Structure of this book
 
-Upon finishing this document, you will have created a complete web
-application which allows the users of this application to view web pages
-and upload files.
+This book is divided into three parts, an introduction and two hands-on
+tutorials which will teach you how to build one simple and one complex
+Node.js application, respectively.
 
-Which, of course, is not exactly world-changing, but we will go some
-extra miles and not only create the code that is \"just enough\" to make
-these use cases possible, but create a simple, yet complete framework to
-cleanly separate the different aspects of our application. You will see
-what I mean in a minute.
-
-We will start with looking at how JavaScript development in Node.js is
-different from JavaScript development in a browser.
+We will start by looking at how JavaScript development in Node.js is
+different from JavaScript development for the browser.
 
 Next, we will stay with the good old tradition of writing a \"Hello
 World\" application, which is a most basic Node.js application that
 \"does\" something.
 
-Then, we will discuss what kind of \"real\" application we want to
+Then, we will discuss what kind of first \"real\" application we want to
 build, dissect the different parts which need to be implemented to
 assemble this application, and start working on each of these parts
 step-by-step.
 
-As promised, along the way we will learn about some of the more advanced
+This will serve as an appetizer for the third and last part, where you will
+learn how a real life, full featured application can be realized with Node.js.
+
+As promised, along the way you will learn about some of the more advanced
 concepts of JavaScript, how to make use of them, and look at why it
-makes sense to use these concepts instead of those we know from other
+makes sense to use these concepts instead of those you know from other
 programming languages.
 
-# JavaScript and Node.js
+Ready? Let's roll.
+
+# Part I: Introduction to JavaScript and Node.js
 
 ## JavaScript and You
 
 Before we talk about all the technical stuff, let\'s take a moment and
 talk about you and your relationship with JavaScript. This chapter is
-here to allow you to estimate if reading this document any further makes
+here to allow you to estimate if reading this book any further makes
 sense for you.
 
 If you are like me, you started with HTML \"development\" long ago, by
@@ -111,20 +120,6 @@ There is, of course, excellent documentation out there. But
 documentation alone sometimes isn\'t enough. What is needed is guidance.
 
 My goal is to provide a guide for you.
-
-## A word of warning
-
-There are some really excellent JavaScript people out there. I\'m not
-one of them.
-
-I\'m really just the guy I talked about in the previous paragraph. I
-know a thing or two about developing backend web applications, but I\'m
-still new to \"real\" JavaScript and still new to Node.js. I learned
-some of the more advanced aspects of JavaScript just recently. I\'m not
-experienced.
-
-Which is why this is no \"from novice to expert\" book. It\'s more like
-\"from novice to advanced novice\".
 
 If I don\'t fail, then this will be the kind of document I wish I had
 when starting with Node.js.
@@ -176,7 +171,7 @@ This should output *Hello World* on your terminal.
 
 Ok, this stuff is boring, right? Let\'s write some real stuff.
 
-# A full blown web application with Node.js
+# Part II: A first full blown web application with Node.js
 
 ## The use cases
 
@@ -218,26 +213,6 @@ order to fulfill the use cases?
 * Last but not least, the user will be able to upload images, so we are
   going to need some kind of **upload handling** which takes care of the
   details
-
-We are going to implement the described use cases and the outlined
-application stack in different flavours. We will start with a "bare metal"
-version, i.e., we will only use what Node.js provides directly, and with
-one exception, we will not make use of any frameworks or external libraries.
-For this first version, we will not use an HTTP middleware, but instead we
-will write a rudimentary one ourselves. We will not use a database for storing
-data, but instead we will utilize the local file system.
-
-Once we have this basic version up and running, we will step by step transform
-it into a more sophisticated version - we will add database support, once for
-MongoDB and once for MySQL, then we will refactor our homegrown HTTP-handling
-architecture to the Express.js framework, and last but not least, we will add
-realtime messaging using the Socket.IO library. By doing so, we will encounter
-all the aspects and techniques within Node.js that are worthwhile and important
-to know.
-
-But let's not get ahead of ourselves - we will just start at the beginning
-and implement the first basic version, beginning with the first part of our
-stack, the HTTP server.
 
 # Building a basic application stack
 
@@ -2141,17 +2116,7 @@ And that\'s it. Restart the server, and the complete use case will be
 available. Select a local PNG image from your hardrive, upload it to the
 server, and have it displayed in the web page.
 
-# Adding unit tests using Jasmine
-
-# Extending the basic version with MongoDB support
-
-# Extending the basic version with MySQL support
-
-# Refactoring the code into an Express.js application
-
-# Adding real time messaging using Socket.IO
-
-
+# Part III: Building a full-featured webbased group chat with filesharing
 
 [1]: https://github.com/joyent/node/wiki/Installation "Building and Installing Node.js"
 [2]: http://localhost:8888/ 
