@@ -17,7 +17,7 @@ you have never written a single line of Node.js code before. However,
 advanced topics, which allow you to extend your Node.js know-how once you
 mastered the basics, are found in the second hands-on part.
 
-This third part - where you learn to develop a fully featured web chat
+This third part - where you learn to develop a full-featured web chat
 application with websocket-based realtime messaging, drag-and-drop file
 sharing, a database backend (MongoDB as well as MySQL), including a suite
 of unit tests - is currently work in progress and about 0% done.
