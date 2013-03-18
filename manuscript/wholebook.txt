@@ -2118,6 +2118,8 @@ server, and have it displayed in the web page.
 
 # Part III: A full-featured webbased group chat with filesharing
 
+## The goal
+
 Let's step it up a notch or two and build a full-featured application. Node.js
 is a general purpose development stack, but its strengths lie in the realm of
 network-based realtime communications. That's why a lot of introductionary
@@ -2134,6 +2136,14 @@ that they just received some kind of half-assed alpha software.
 Of course, some work lies ahead of us to achieve this. But this is also a great
 opportunity to get in touch with even more interesting topics regarding Node.js
 - unit testing, Websockets, and databases, to name a few.
+
+## Overview of the final application
+
+Once finished, this is what our application will look like:
+
+
+
+This screenshot shows a web interface which allows its users to 
 
 
 
